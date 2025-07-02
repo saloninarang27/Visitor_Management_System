@@ -1,0 +1,12 @@
+visitor-backend/
+├── config/
+│   └── db.js
+├── node_modules/          
+├── routes/
+│   ├── auth.js
+│   ├── resetPassword.js
+│   └── visitor.js       
+│   └── passes.js          
+├── server.js
+├── .env
+└── package.json

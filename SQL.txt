@@ -1,0 +1,42 @@
+DB- visitor_management
+
+
+1. For user:
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  user_type VARCHAR(100),
+  image VARCHAR(255)
+);
+
+
+2.For visitor
+
+CREATE TABLE visitors (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone VARCHAR(15),
+  address TEXT,
+  email VARCHAR(255),
+  blood_group VARCHAR(10),
+  visitor_type VARCHAR(100),
+  gov_id_type VARCHAR(100),
+  gov_id_no VARCHAR(100),
+  image LONGTEXT,
+  signature LONGTEXT
+);
+
+
+3.For passes
+CREATE TABLE passes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  visitor_id INT,
+  visiting_purpose TEXT,
+  whom_to_visit VARCHAR(255),
+  visiting_department VARCHAR(255),
+  valid_until DATETIME,
+  created_on DATETIME DEFAULT CURRENT_TIMESTAMP
+);
